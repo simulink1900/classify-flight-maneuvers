@@ -7,9 +7,11 @@
 ```
 classify-flight-maneuvers/
 ├── notebooks/
+│   ├── flight_maneuver_eda.ipynb           # Exploratory data analysis
 │   ├── flight_maneuver_training.ipynb      # Main training pipeline
-│   ├── flight_maneuver_submission.ipynb    # Test submission generation
-│   └── flight_maneuver_classification.ipynb # (Legacy - exploratory)
+│   └── flight_maneuver_submission.ipynb    # Test submission generation
+├── src/
+│   └── utils.py                            # Feature extraction utilities
 ├── data/                                    # Symlinks to training/test data
 ├── output/                                  # Model artifacts & submissions
 └── pyproject.toml                          # uv dependencies
@@ -67,11 +69,11 @@ uv run jupyter lab notebooks/flight_maneuver_submission.ipynb
 
 **Evaluation Metric**: Minimum F1 score across 3 classes
 
-**Sample Results** (0.1 data sample):
+**Latest Results** (full dataset):
 - Best Model: XGBoost
-- Validation Accuracy: ~0.90
-- Validation Min F1: ~0.77
-- Per-class F1: [0.96, 0.77, 0.91]
+- Validation Accuracy: 0.999
+- Validation Min F1: 0.996
+- Best Hyperparameters: k=35 features, learning_rate=0.15, max_depth=5, n_estimators=200
 
 ## Feature Engineering
 
