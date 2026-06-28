@@ -216,6 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-output/*.pkl
-output/submission.csv
-output/training_results.json
+
+# Output artifacts (tracked in git)
+!output/
+!output/*.pkl
+!output/submission.csv
+!output/training_results.json
