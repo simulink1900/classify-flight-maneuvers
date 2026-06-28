@@ -1,0 +1,29 @@
+{
+  "best_model": "XGBoost",
+  "model_comparison": [
+    {
+      "Model": "XGBoost",
+      "Training F1": 0.9396105023734154,
+      "Validation Accuracy": 0.9985736514522822,
+      "Validation Min F1": 0.99644128113879
+    },
+    {
+      "Model": "LightGBM",
+      "Training F1": 0.9405568561441159,
+      "Validation Accuracy": 0.9971473029045643,
+      "Validation Min F1": 0.990152193375112
+    },
+    {
+      "Model": "RandomForest",
+      "Training F1": 0.9303525562046894,
+      "Validation Accuracy": 0.9804201244813278,
+      "Validation Min F1": 0.9536178107606679
+    }
+  ],
+  "best_hyperparameters": {
+    "feature_selector__k": 35,
+    "model__learning_rate": 0.15,
+    "model__max_depth": 5,
+    "model__n_estimators": 200
+  }
+}
